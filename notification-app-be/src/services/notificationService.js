@@ -14,8 +14,8 @@ async function Log(service, level, message) {
 async function fetchExternalNotifications() {
   await Log('notification-service', 'info', 'Fetching notifications from external API');
   
-  const baseURL = process.env.EVALUATION_SERVICE_URL || 'http://localhost:3000/evaluation-service/notifications';
-  const token = process.env.EXTERNAL_API_TOKEN || 'EVALUATION_API_TOKEN';
+  const baseURL = process.env.EVALUATION_SERVICE_URL || 'http://4.224.186.213/evaluation-service/notifications';
+  const token = process.env.EXTERNAL_API_TOKEN 
 
   const response = await axios.get(baseURL, {
     headers: { Authorization: `Bearer ${token}` },
